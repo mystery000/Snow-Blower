@@ -3,9 +3,9 @@
 <package format="3">
   <name>snow_blower</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="arthlo@todo.todo">arthlo</maintainer>
-  <license>TODO: License declaration</license>
+  <description>Snow Blower with OAK-D Robotics Camera and Raspberry PI 4 8GB Starter Kit</description>
+  <maintainer email="hafeelmo1100@gmail.com">Mohamed Hafeel</maintainer>
+  <license>License declaration</license>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
