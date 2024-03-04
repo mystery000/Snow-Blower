@@ -17,6 +17,8 @@ _generate/
 
 # builds
 _builds/
+install
+log
 
 #git
 *.orig

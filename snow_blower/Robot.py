@@ -1,13 +1,24 @@
+#!/usr/bin/python3
+
 import math
 import rclpy
-import Motor
-import ChuteAuger
 import RPi.GPIO as GPIO
+from Motor import Motor
 from rclpy.node import Node
 from std_msgs.msg import String
+from ChuteAuger import ChuteAuger
 from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Joy, Range
 
+#!/usr/bin/python3
+
+import RPi.GPIO as GPIO
+
+Dir = [
+    'forward',
+    'backward',
+]
+    
 class Robot(Node):
     '''
     Elaborate later on but for now we'll add functionality for:
@@ -208,6 +219,7 @@ class Robot(Node):
 
         self.motor.MotorRun(0, index_l, abs(left_percentage))
         self.motor.MotorRun(1, index_r, abs(right_percentage))
+
 
 def main(args=None):
     print('Hi from snow_blower.')

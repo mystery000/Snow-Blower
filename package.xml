@@ -5,7 +5,7 @@
   <version>0.0.0</version>
   <description>Snow Blower with OAK-D Robotics Camera and Raspberry PI 4 8GB Starter Kit</description>
   <maintainer email="hafeelmo1100@gmail.com">Mohamed Hafeel</maintainer>
-  <license>License declaration</license>
+  <license>Apache License 2.0</license>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
