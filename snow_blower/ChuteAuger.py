@@ -1,12 +1,5 @@
-import math
-import rclpy
-from rclpy.node import Node
-from std_msgs.msg import String
-from geometry_msgs.msg import Twist, Vector3
-from sensor_msgs.msg import Joy, Range
-import RPi.GPIO as GPIO
 import time
-import sys
+import RPi.GPIO as GPIO
 
 Dir = [
     'forward',
