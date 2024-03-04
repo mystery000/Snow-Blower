@@ -1,12 +1,4 @@
-import sys
-import math
-import time
-import rclpy
 import RPi.GPIO as GPIO
-from rclpy.node import Node
-from std_msgs.msg import String
-from sensor_msgs.msg import Joy, Range
-from geometry_msgs.msg import Twist, Vector3
 
 Dir = [
     'forward',
@@ -48,7 +40,7 @@ class Motor:
         GPIO.setup(self.R_ENR, GPIO.OUT)
         GPIO.output(self.R_ENR, True)
         GPIO.output(self.L_ENR, True)
-        
+
         self.rpwmR = GPIO.PWM(self.RPWMR, 100)
         self.lpwmR = GPIO.PWM(self.LPWMR, 100)
         self.rpwmR.ChangeDutyCycle(0) # For forward rotation
