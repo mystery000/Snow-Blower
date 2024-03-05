@@ -3,12 +3,12 @@
 import math
 import rclpy
 import RPi.GPIO as GPIO
+from motor import Motor
 from rclpy.node import Node
 from std_msgs.msg import String
+from chute_auger import ChuteAuger
 from geometry_msgs.msg import Twist
-from snow_blower.motor import Motor
 from sensor_msgs.msg import Joy, Range
-from snow_blower.chute_auger import ChuteAuger
 
 #!/usr/bin/python3
 
