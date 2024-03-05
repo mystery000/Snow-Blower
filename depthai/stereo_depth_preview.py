@@ -61,14 +61,14 @@ with dai.Device(pipeline) as device:
         mask = cv2.inRange(frame, 10, depth_thresh)
         
         # Check if a significantly large obstacle is present and filter out smaller noisy regions
-        if np.sum(mask)/255.0 > 0.01*mask.shape[0]*mask.shape[1]:
+        if np.sum(mask) / 255.0 > 0.01 * mask.shape[0] * mask.shape[1]:
         
             # Contour detection 
             contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
             cnts = sorted(contours, key=cv2.contourArea, reverse=True)
             
             # Check if detected contour is significantly large (to avoid multiple tiny regions)
-            if cv2.contourArea(cnts[0]) > 0.01*mask.shape[0]*mask.shape[1]:
+            if cv2.contourArea(cnts[0]) > 0.01 * mask.shape[0] * mask.shape[1]:
             
                 x,y,w,h = cv2.boundingRect(cnts[0])
             
@@ -80,12 +80,12 @@ with dai.Device(pipeline) as device:
                 depth_mean, _ = cv2.meanStdDev(frame, mask=mask2)
                 
                 # Display warning text
-                cv2.putText(frame, "WARNING !", (x+5,y-40), 1, 2, (0,0,255), 2, 2)
-                cv2.putText(frame, "Object at", (x+5,y), 1, 2, (100,10,25), 2, 2)
-                cv2.putText(frame, "%.2f cm"%depth_mean, (x+5,y+40), 1, 2, (100,10,25), 2, 2)
+                cv2.putText(frame, "WARNING !", (x + 15, y), 1, 2, (0, 0, 255), 2, 2)
+                cv2.putText(frame, "Object at", (x + 15, y + 40), 1, 2, (100, 10, 25), 2, 2)
+                cv2.putText(frame, "%.2f cm"%depth_mean, (x + 15, y + 80), 1, 2, (100, 10, 25), 2, 2)
         
         else:
-            cv2.putText(frame, "SAFE!", (100,100),1,3,(0,255,0),2,3)
+            cv2.putText(frame, "SAFE!", (100, 100), 1, 3, (0, 255, 0), 2, 3)
         
         cv2.imshow('output_canvas', frame)
 
