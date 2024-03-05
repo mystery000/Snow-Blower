@@ -50,7 +50,7 @@ class Robot(Node):
 
         self._command_subscription = self.create_subscription(String, 'command', self._command_callback, 10)
         self._command_subscription = self.create_subscription(String, 'chaucommand', self._chaucommand_callback, 6)
-        self._command_subscription = self.create_subscription(Twist, 'cmd_vel', self.self._cmd_vel_callback, 2)
+        self._command_subscription = self.create_subscription(Twist, 'cmd_vel', self._cmd_vel_callback, 2)
         self._command_subscription = self.create_subscription(Joy, 'joy', self._joy_callback, 5)
         self._command_subscription = self.create_subscription(Range, 'range', self._range_callback, 5)
 
