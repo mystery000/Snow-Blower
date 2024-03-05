@@ -1,0 +1,22 @@
+# Running the node
+• cd work/ws
+• source install/setup.bash
+• ros2 run snow_blower listener
+
+# Turning the wheels
+ros2 topic pub -1 /command std_msgs/msg/String '{data: forward}'   # To move forward
+ros2 topic pub -1 /command std_msgs/msg/String '{data: backward}'  # To move backward
+ros2 topic pub -1 /command std_msgs/msg/String '{data: left}'      # To move left
+ros2 topic pub -1 /command std_msgs/msg/String '{data: right}'     # To move right
+ros2 topic pub -1 /command std_msgs/msg/String '{data: stop}'      # To stop
+
+# AUGER
+ros2 topic pub -1 /chaucommand std_msgs/msg/String '{data: auforward}    # To move Auger UP
+ros2 topic pub -1 /chaucommand std_msgs/msg/String '{data: austop}       # To stop
+ros2 topic pub -1 /chaucommand std_msgs/msg/String '{data: aubackward}   # To move Auger Down
+
+# CHUTE
+ros2 topic pub -1 /chaucommand std_msgs/msg/String '{data: chforward}    # To move Chute to right
+ros2 topic pub -1 /chaucommand std_msgs/msg/String '{data: chstop}       # To stop
+ros2 topic pub -1 /chaucommand std_msgs/msg/String '{data: chbackward}   # To move Chute to left
+
