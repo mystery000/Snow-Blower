@@ -13,14 +13,14 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='arthlo',
-    maintainer_email='arthlo@todo.todo',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    maintainer='Mohamed Hafeel',
+    maintainer_email='hafeelmo1100@gmail.com',
+    description='Snow Blower',
+    license='Apache License 2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'Robot = snow_blower.Robot:main'
+            'Robot = snow_blower.robot:main'
         ],
     },
 )
