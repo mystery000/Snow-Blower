@@ -78,19 +78,19 @@ class Robot(Node):
         if command == 'forward':
             print('Moving forward...')
             self.motor.MotorRun(0, 'forward', 25)
-            self.motor.MotorRun(1, 'backward', 25)
+            self.motor.MotorRun(1, 'forward', 25)
         elif command == 'backward':
             print('Moving backward...')
             self.motor.MotorRun(0, 'backward', 20)
-            self.motor.MotorRun(1, 'forward', 20)
+            self.motor.MotorRun(1, 'backward', 20)
         elif command == 'left':
             print('Turning left...')
-            self.motor.MotorRun(0, 'forward', 20)
-            self.motor.MotorRun(1, 'forward', 7)
+            self.motor.MotorRun(0, 'forward', 7)
+            self.motor.MotorRun(1, 'forward', 20)
         elif command == 'right':
             print('Turning right...')
-            self.motor.MotorRun(0, 'backward', 7)
-            self.motor.MotorRun(1, 'backward', 20)
+            self.motor.MotorRun(0, 'backward', 20)
+            self.motor.MotorRun(1, 'backward', 7)
         elif command == 'stop':
             print('Stopping...')
             self.stop()
